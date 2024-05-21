@@ -3,18 +3,27 @@
 }
 
 body {
-    color: rgb(125, 136, 158);
-    font-family: Outfit;
+    color: hsl(220, 15%, 55%);
+    font-family: Outfit, sans-serif;
     font-weight: 400;
-    letter-spacing: 0.19px;
-    background: rgb(242, 242, 242);
+    letter-spacing: 0.012rem;
+    background-color: hsl(212, 45%, 89%);
+    padding: 1rem; /*ensure the card doesn't touch the edges on small screens*/
+    
+    /*Center the card horizontally and vertically*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100svh;
+    gap: 2rem;
+    text-align: center;
 }
 
 /* Heading */
 h1 {    
-    color: rgb(31, 49, 79);
-    font-family: Outfit;
-    font-size: 22px;
+    color: hsl(218, 44%, 22%);
+    font-size: 1.375rem;
     font-weight: 700;
 }
 
@@ -23,44 +32,23 @@ h1 {
     display: flex;
     align-items: center;
     flex-direction: column;
-    width: 320px;
-    height: 500px;
     border-radius: 20px;
-    box-shadow: 0px 25px 25px 0px rgba(0, 0, 0, 0.05);
-    background: rgb(255, 255, 255);
-    text-align: center;
-    position: fixed; /*Centering div*/
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    /*Solves a problem in which the content is being cut when the div is smaller than its' wrapper:*/
-    max-width: 100%;
-    max-height: 100%;
-    overflow: auto;
-}
-
-/*Width and height for three divs: image, header, paragraph*/
-.con {
-    width: 288px;
-    height: 288px;
-}
-
-.image {
-    margin: 16px 16px 0 16px;
+    box-shadow: 0px 25px 25px 0px hsla(0, 0%, 0%, 0.05);
+    background-color: hsl(0, 0%, 100%);
+    padding: 1rem;
+    max-width: 20rem; /*prevent from getting too wide on larger screens*/
 }
 
 img {
-    width: 100%;
-    height: 100%;
     border-radius: 10px;
+    display: block;
+    max-width: 100%; /*prevents from overflowing its container*/
 }
 
 /*Footer section*/
 .attribution { 
-    position: fixed;
-    font-size: 11px; 
-    text-align: center; 
-    bottom: 10px;
+    font-size: 0.688rem; 
+    bottom: 0.625rem;
     width: 100%;
 }
 
